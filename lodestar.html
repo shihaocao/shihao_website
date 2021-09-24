@@ -14,6 +14,11 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<style>
+			.img-container {
+			  text-align: center;
+			}
+		</style>
 	</head>
 	<body>
 
@@ -64,16 +69,118 @@
 
 						<section class="wrapper style5">
 							<div class="inner">
-								<h3>Extra Details</h3>
+								<!-- <h3>Extra Details</h3>
 								<p>Together with a partner, we designed and built an electric VTOL drone with single point
 								vectored thrust. It delivers weighs about one kg, and can hover vertically. I designed the
 								vehicle and wrote the C++ flight software, and my partner did the testing and GNC code.
-								</p>
+								</p> -->
+								<!-- <hr/> -->
+
+								<h3>Introduction</h3>
 								<p>
-								More Details to Come!
+								Lodestar is a small scale electric vertical takeoff
+								and landing (VTOL capable) project that I worked
+								on with Govind Chari over the 2020 Summer. I
+								was in Hawthorne, so I designed the craft and
+								wrote the flight software. My partner Govind built
+								and tested the vehicle, and also wrote the GNC
+								code. By the end of the summer, the vehicle
+								could perform a takeoff and land vertically.
+								The objective was to understand the challenges
+								in creating a vehicle that could take off and land
+								vertically through thrust vectoring only similar to
+								the Falcon 9.
 								</p>
+								<hr/>
+
+								<h3>Years Before</h3>
+								<p>
+									The first attempts at this project, actually started back in 2017
+									before I had even met Govind. Together with Matthew Cox, and Jude Bedessem,
+									we studied how to build a similar system for recovery of high power rockets.
+
+									While they worked on the rocketry side of the project, I lead the way on the
+									recovery side with two pathfinder vehicles for an electric motor vertical landing
+									system.
+								</p>
+
+								<h3>Pathfinder 1 - EDF Thrust Vectoring</h3>
+								<p>This initial pathfinder taught me how to build a thurst vectoring actuators, and
+									I was also able to test using an EDF as a main power system. I realized that the torque
+									delivered from the motor needed significant compensation. Further that an EDF sized system
+									was too large and heavy for safe prototyping. This drove me to target a lighter smaller system on the next iteration.
+								</p>
+								<div class ="9u 12u$(medium)">
+									<div class="img-container">
+									<img src="images\lodestar\edf-vectoring.jpg" alt="EDF Thrust Vectoring System" width="50%">
+									<p></p>
+									</div>
+								</div>
 								
 
+								<h3>Pathfinder 2 - Counter Rotating Props and Active Control</h3>
+								<p>On this iteration, I tested using a commercial flight computer the Pixhawk 4, and two counter rotating
+									propellers. This also used a similar fin based thrust vectoring system. In the picture below, you'll
+									see it hanging from strings as a partial free-hanging system to test roll control. A system I would repeat
+									for Lodestar.
+								</p>
+								<div class ="9u 12u$(medium)">
+									<div class="img-container">
+									<img src="images\lodestar\counter-rotating.jpg" alt="Counter Rotating Prop System with Flight Controller" width="50%">
+									<p></p>
+									</div>
+								</div>
+								<hr/>
+
+								<h3>Lodestar Design</h3>
+								<p>
+								Using lessons learned from my past designs, the bill of materials and overall system design (mass budget, power budget,...) 
+								was very easy to get right on the first try.
+							  I I chose to use two
+								counter-rotating quadcopter motors to cancel
+								torque and ensure centerline thrust. Roll control
+								on the craft is achieved through differential thrust,
+								and pitch & yaw is achieved through thrust
+								vectoring vanes actuated by servos inside the
+								thrust structure. The two motors have seperate power systems, and one of them also powers the avionics stack.
+								</p>
+								<hr/>
+
+								<h3>Flight Software and Ground Software</h3>
+								<p>
+								Flight software on this vehicle was derived from the flight software on PAN (my satellite team). This gave the
+								fine grained control that I did not have from previous commerical flight computers. I
+								wrote all code to parse orientation and position data from the onboard IMU and Barometer. I
+								wrote a mission manager state machine that guided the craft through sensor initialization, flight,
+								and post-landing. To aid with initial development, I also developed a custom NodeJS based web
+								ground station. I also wrote all the boilerplate code that my partner plugged into for guidance,
+								navigation, and control.
+								</p>
+
+								<p>Here's the link to the <a href="https://github.com/shihaocao/lodestar">repository</a> for Lodestar.</p>
+								<hr/>
+
+								<h3>Iteration</h3>
+								<p>
+								I worked with my partner to develop an
+								iterated testing campaign that would guide us to full mission success. We created a
+								Matlab simulation that verified simple attitude control PID loops. We then built the craft and did
+								thrust testing to verify that it was capable of a greater than one thrust to weight ratio. To aid in development,
+								and figuring out why flight failures happen, I added SD-card datalogging for post-flight analysis.
+								</p>
+								<hr/>
+
+								<h3>Roll Control</h3>
+								We verified the full control loop from sensors to actuators by only allowing freedom in the roll axis,
+								and verifying that the craft could maintain a steady roll angle. 
+								</p>
+								<hr/>
+
+								<h3>Final Flights</h3>
+								<p>
+								After lots of testing and a few total rebuilds of the vehicle, we finally got Lodestar to perform a vertical
+								takeoff and landing after the 23rd test flight.
+								</p>
 							</div>
 
 
