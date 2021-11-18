@@ -2253,6 +2253,96 @@
 		text-overflow: ellipsis;
 	}
 
+	.button2 {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		background-color: transparent;
+		border-radius: 3px;
+		border: 0;
+		box-shadow: inset 0 0 0 2px #fff;
+		color: #fff;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 0.8em;
+		font-weight: 600;
+		height: 3.125em;
+		letter-spacing: 0.225em;
+		line-height: 3.125em;
+		padding: 0 6.35em;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.buttonwide {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		background-color: transparent;
+		border-radius: 3px;
+		border: 0;
+		box-shadow: inset 0 0 0 2px #fff;
+		color: #fff;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 0.8em;
+		font-weight: 600;
+		height: 3.125em;
+		letter-spacing: 0.225em;
+		line-height: 3.125em;
+		padding: 0 6.95em;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.buttonyt{
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		background-color: transparent;
+		border-radius: 3px;
+		border: 0;
+		box-shadow: inset 0 0 0 2px #fff;
+		color: #fff;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 0.8em;
+		font-weight: 600;
+		height: 3.125em;
+		letter-spacing: 0.225em;
+		line-height: 3.125em;
+		padding: 0 3.05em;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
